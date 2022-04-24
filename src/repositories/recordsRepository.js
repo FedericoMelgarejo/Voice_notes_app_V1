@@ -18,4 +18,31 @@ module.exports = recordsRepository = {
     });
     return created;
   },
+  update: async function (id, body) {
+    const patch = await records.update(
+      {
+        title: body.title,
+        addressee: body.addressee,
+        file: body.file,
+      },
+      {
+        where: {
+          id,
+        },
+      }
+    );
+    const updated = await records.findByPk(id, {
+      attributes: { exclude: ["deletedAt"] },
+    });
+
+    return updated;
+  },
+  destroy: async function (id) {
+    const deleted = await records.destroy({
+      where: {
+        id,
+      },
+    });
+    return deleted;
+  },
 };
