@@ -7,11 +7,11 @@ module.exports = recordsRepository = {
     });
     return list;
   },
-  create: async (body) => {
+  create: async (body, file) => {
     const record = await records.create({
       title: body.title,
       addressee: body.addressee,
-      file: body.file,
+      file: file,
     });
     const created = await records.findByPk(record.id, {
       attributes: { exclude: ["deletedAt"] },
