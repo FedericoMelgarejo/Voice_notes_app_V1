@@ -22,8 +22,6 @@ module.exports = recordsRepository = {
     const patch = await records.update(
       {
         title: body.title,
-        addressee: body.addressee,
-        file: body.file,
       },
       {
         where: {
@@ -44,5 +42,12 @@ module.exports = recordsRepository = {
       },
     });
     return deleted;
+  },
+  findByPk: async function (id) {
+    const record = await records.findByPk(id, {
+      attributes: { exclude: ["deletedAt"] }
+    });
+
+    return record;
   },
 };
