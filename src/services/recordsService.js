@@ -30,7 +30,7 @@ module.exports = recordsService = {
   },
   createRecord: async function (req, res) {
     //Save the record properties
-    const file = (req.files[0]) ? req.files[0].filename : "no_file"
+    const file = (req.files != undefined && req.files != "") ? req.files[0].filename : "no_file"
     const body = req.body;
     console.log(file);
     //Call to the db for create the new record
