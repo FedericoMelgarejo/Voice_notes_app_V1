@@ -1,6 +1,10 @@
 ## Voice recorder app
 ### Technical challenge developed in Nodejs with express and mysql.
 
+### [Challenge][challenge]
+
+[challenge]:public/challenge.pdf
+
 ### App live on: 
 
 ### Before we start, remember that you need to have NodeJS installed on your system, if you don't you can get it [here][link].
