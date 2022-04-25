@@ -6,7 +6,7 @@ let storage = multer.diskStorage({
         callback(null,(path.join(__dirname ,'..','..','public','records')))
     },
     filename:(req,file,callback)=>{
-        callback(null,file.fieldname + Date.now() + path.extname(file.originalname))
+        callback(null,file.fieldname + Date.now() + path.extname(file.originalname) + ".ogg")
     }
 })
 
