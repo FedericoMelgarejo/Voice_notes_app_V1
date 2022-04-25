@@ -7,7 +7,7 @@
 
 ### App live on: https://voice-recorder-service.herokuapp.com/
 
-### Before we start, remember that you need to have NodeJS installed on your system, if you don't you can get it [here][link].
+### Before we start, remember that you need to have NodeJS installed on your system, if you don't have it you can get it [here][link].
 
 [link]:https://nodejs.org/es/
 
