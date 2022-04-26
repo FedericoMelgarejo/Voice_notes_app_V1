@@ -13,7 +13,7 @@
 
 ## Get started:
 - Run *npm install* to install the dependencies
-- Configure a DB connection in the .env file, reference in example.env file.
+- Create a .env file and configure a DB connection, reference in example.env.
 - Run *sequelize db:create* to create the DB
 - Run *sequelize db:migrate* to create the tables
 - Run *npm start* to init the server
